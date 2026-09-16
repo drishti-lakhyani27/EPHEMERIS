@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
-const API_BASE = "https://ephemeris-backend-bkf2.onrender.com";
-const UPLOAD_URL = `${API_BASE}/upload`;
+const API_BASE = "";
+const UPLOAD_URL = "/api/upload";
 
 
 /* =========================================================
