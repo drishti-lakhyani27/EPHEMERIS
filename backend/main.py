@@ -1,4 +1,3 @@
-
 import os
 import time
 
@@ -30,8 +29,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=[
+        "https://ephemeris-ten.vercel.app",
+    ],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -225,13 +226,6 @@ async def upload_images(
         print(
             "EPHEMERIS: processing SPICE metadata..."
         )
-
-        # IMPORTANT:
-        # process_image_metadata() accepts ONE argument:
-        # the image filename.
-        #
-        # The previous version incorrectly passed KERNELS
-        # as a second argument.
 
         try:
 
@@ -429,4 +423,3 @@ async def upload_images(
 
                 except Exception:
                     pass
-
