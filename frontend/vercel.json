@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/api/upload",
-      "destination": "https://ephemeris-backend-bkf2.onrender.com/upload"
-    }
-  ]
-}
